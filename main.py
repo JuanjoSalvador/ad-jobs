@@ -16,3 +16,6 @@ def root():
 def admin():
     return render_template("admin.jinja")
 
+if __name__ == '__main__':
+        app.run()
+
