@@ -1,0 +1,50 @@
+{% extends 'base.jinja' %}
+{% block content %}
+
+   <section class="section">
+      <div class="container">
+         <div class="columns">
+            <div class="column"></div>
+            <div class="column is-three-quarters">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="content">
+                        <p>
+                           Para permitir que Midas CI pueda gestionar las tareas de build, testing e integración de tu código, primero necesitamos algunos datos, como el nombre del
+                           proyecto, y la URL del repositorio donde lo estás alojando. Si no tienes ya uno, te recomendamos que utilices un repositorio local Gogs o Gitea, perfectos
+                           para servir desde una Raspberry Pi.
+                        </p>
+                        <br/>
+                        <form method="POST" action="/new">
+                           <div class="field">
+                              <label class="label">Nombre del proyecto</label>
+                              <div class="control">
+                                 <input class="input" name="project_name" type="text" placeholder="Mi fantástico proyecto" required>
+                              </div>
+                           </div>
+                           <div class="field">
+                              <label class="label">URL del repositorio</label>
+                              <div class="control">
+                                 <input class="input" name="project_repo" type="text" placeholder="https://azeroth.local/juanjo/midas-ci.git" required>
+                              </div>
+                           </div>
+                           <br/><br/>
+                           <div class="field is-grouped">
+                              <div class="control">
+                                 <input type="submit" value="Aceptar" class="button is-link">
+                              </div>
+                              <div class="control">
+                                 <button class="button is-text">Cancelar</button>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="column"></div>
+         </div>
+      </div>
+   </section>
+
+{% endblock %}

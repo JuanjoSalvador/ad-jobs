@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ config.SITE_TITLE }}</title>
+        <link rel="stylesheet" href="/css/bulma.min.css">
+
+        <style>
+            .index-card {
+                min-height: 15em;
+                max-height: 15em;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="hero is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        {{ config.SITE_TITLE }}
+                    </h1>
+                    <h2 class="subtitle">
+                        {{ config.SITE_DESCRIPTION }}
+                    </h2>
+                </div>
+            </div>
+        </section>
+        {% block content %}
+            <!-- content -->
+        {% endblock %}
+    </body>
+</html>
