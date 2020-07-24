@@ -12,13 +12,17 @@ app.config.from_pyfile('settings.cfg')
 def index():
     return render_template("index.jinja")
 
-@app.route('/send',methods=['GET', 'POST'])
+@app.route('/enviar',methods=['GET', 'POST'])
 def send():
     form_sended = False
     if request.method == 'POST':
         form_sended = True
 
     return render_template("new.jinja", form_sended = form_sended)
+
+@app.route('/contacto',methods=['GET'])
+def contact():
+    return render_template("contacto.jinja")
 
 @app.route('/admin',methods=['GET', 'POST'])
 def admin():

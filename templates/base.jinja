@@ -8,15 +8,30 @@
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     </head>
     <body>
-        <section class="hero is-dark">
+        <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">
-                        {{ config.SITE_TITLE }}
-                    </h1>
-                    <h2 class="subtitle">
-                        {{ config.SITE_DESCRIPTION }}
-                    </h2>
+                    {#  #}
+                    <nav class="level">
+                        <p class="level-item has-text-centered">
+                            <a class="link is-info" href="/">Inicio</a>
+                        </p>
+                        <p class="level-item has-text-centered">
+                            <a class="link is-info" href="/enviar">Envía una oferta</a>
+                        </p>
+                        <div class="level-item has-text-centered">
+                            <h1 class="title" style="text-align: center">
+                                {{ config.SITE_TITLE }}
+                            </h1>
+                        </div>
+                        <p class="level-item has-text-centered">
+                            <a class="link is-info" href="https://t.me/andaluciadev">Telegram</a>
+                        </p>
+                        <p class="level-item has-text-centered">
+                            <a class="link is-info" href="/contacto">Contacto</a>
+                        </p>
+                    </nav>
+                    
                 </div>
             </div>
         </section>
