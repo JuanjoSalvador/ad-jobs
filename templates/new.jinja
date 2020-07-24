@@ -17,8 +17,8 @@
                         </h3>
 
                         <p>
-                            Rellena este pequeño formulario con algunos datos sobre la oferta, ¡y listo! Si quieres, además
-                            podrás añadir una dirección de contacto (telegram, correo electrónico, twitter...).
+                            Rellena este pequeño formulario con algunos datos sobre la oferta, ¡y listo! Añade además una dirección o URL de contacto 
+                            (telegram, correo electrónico, twitter...), para facilitar a los candidatos la posibilidad de incorporarse en proceso de selección.
                         </p>
 
                         <form method="POST" action="/">
@@ -35,9 +35,15 @@
                                 </div>
                             </div>
                             <div class="field">
+                                <label class="label">Descripción de la oferta</label>
+                                <div class="control">
+                                    <textarea class="input" placeholder="Empresa líder del sector en busca de su próximo empleado del mes."></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
                                 <label class="label">Salario bruto anual (opcional)</label>
                                 <div class="control">
-                                    <input class="input" name="project_name" type="text" placeholder="25000">
+                                    <input class="input" name="project_name" type="number" min="15000" placeholder="25000">
                                 </div>
                             </div>
                             <div class="field">
@@ -47,15 +53,15 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Requisitos</label>
+                                <label class="label">Requisitos (opcional)</label>
                                 <div class="control">
-                                    <textarea class="input" placeholder="Al menos 2 años de experiencia con PHP"></textarea>
+                                    <textarea class="input" placeholder="Al menos 2 años de experiencia con Python, Git, Heroku"></textarea>
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Pluses</label>
+                                <label class="label">Pluses (opcional)</label>
                                 <div class="control">
-                                    <textarea class="input" placeholder="Fruta fresca, café gratis, seguro médico..."></textarea>           
+                                    <textarea class="input" placeholder="Kiwis, café, seguro médico"></textarea>           
                                 </div>
                             </div>
                             <div class="field">
@@ -65,12 +71,12 @@
                                 </div>
                             </div>
                             <br/><br/>
-                            <div class="field is-grouped">
-                                <div class="control">
-                                    <input type="submit" value="Aceptar" class="button is-link">
-                                </div>
+                            <div class="field is-grouped is-grouped-right">
                                 <div class="control">
                                     <input type="reset" value="Borrar" class="button is-text">
+                                </div>
+                                <div class="control">
+                                    <input type="submit" value="Aceptar" class="button is-link">
                                 </div>
                             </div>
                         </form>
