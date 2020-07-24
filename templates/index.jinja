@@ -4,99 +4,50 @@
 
    <section class="section">
       <div class="container">
-         <div class="columns is-mobile">
+         <div class="columns is-flex">
             <div class="column"></div>
-
-            <div class="column is-three-quarters">
-                <div class="content">
-
-                    {% if form_sended == False %}
-
-                        <h3 class="title">
-                            ¡Quiero enviar una oferta de trabajo!
-                        </h3>
-
-                        <p>
-                            Rellena este pequeño formulario con algunos datos sobre la oferta, ¡y listo! Si quieres, además
-                            podrás añadir una dirección de contacto (telegram, correo electrónico, twitter...).
-                        </p>
-
-                        <form method="POST" action="/">
-                            <div class="field">
-                                <label class="label">Puesto</label>
-                                <div class="control">
-                                    <input class="input" name="project_name" type="text" placeholder="Software Engineer" required>
+                <div class="column is-three-quarters">
+                    <div class="content">
+                    <!-- INICIO contenido de ejemplo -->
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Vicepresidente Ejecutivo
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, 
+                                        nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                                    </p>
+                                    <ul style="list-style: none">
+                                        <li><strong>Compañía</strong>: Compu-Global-Hyper-Mega-Net</li>
+                                        <li><strong>Salario</strong>: 40.000€ anuales</li>
+                                        <li><strong>Localización</strong>: Springfield</li>
+                                        <li>
+                                        <strong>Cualidades requeridas</strong>:
+                                            <ul>
+                                                <li>Python 3</li>
+                                                <li>Flask</li>
+                                                <li>CSS3</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                        <strong>¿Qué ofrecemos?</strong>:
+                                            <ul>
+                                                <li>Kiwis del día</li>
+                                                <li>Café incluído</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Sitio web</strong>: <a href="https://jsalvador.me/">jsalvador.me</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="field">
-                                <label class="label">Empresa</label>
-                                <div class="control">
-                                    <input class="input" name="project_name" type="text" placeholder="Andalucía Developers S.A." required>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Salario bruto anual (opcional)</label>
-                                <div class="control">
-                                    <input class="input" name="project_name" type="text" placeholder="25000">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Localizacion</label>
-                                <div class="control">
-                                    <input class="input" name="project_name" type="text" placeholder="Sevilla" required>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Requisitos</label>
-                                <div class="control">
-                                    <textarea class="input" placeholder="Al menos 2 años de experiencia con PHP"></textarea>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Pluses</label>
-                                <div class="control">
-                                    <textarea class="input" placeholder="Fruta fresca, café gratis, seguro médico..."></textarea>           
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Contacto</label>
-                                <div class="control">
-                                    <input class="input" name="project_repo" type="text" placeholder="URL o dirección de contacto para la oferta" required>
-                                </div>
-                            </div>
-                            <br/><br/>
-                            <div class="field is-grouped">
-                                <div class="control">
-                                    <input type="submit" value="Aceptar" class="button is-link">
-                                </div>
-                                <div class="control">
-                                    <input type="reset" value="Borrar" class="button is-text">
-                                </div>
-                            </div>
-                        </form>
-                    
-                    {% else %}
-
-                        <h3 class="title">
-                            ¡Hemos añadido tu oferta!
-                        </h3>
-
-                        <p>
-                            ¡Pero no está publicada aún! Nuestros administradores tienen que revisar la oferta que nos has enviado para verificar que cumple con todos los requisitos,
-                            en un plazo de 24 horas máximo, estará disponible en el canal.
-                        </p>
-
-                        <p>
-                            Muchas gracias por tu colaboración y esperamos que encontréis a la persona adecuada para el puesto.
-                        </p>
-
-                        <p>
-                            Recuerda que puedes recibir más ofertas de trabajo a través de <a href="https://t.me/andaluciadevjobs">nuestro canal de Telegram</a>.
-                        </p>
-                    {% endif %}
+                        </div>
+                    <!-- FIN contenido de ejemplo -->
+                    </div>
                 </div>
-            </div>
-
             <div class="column"></div>
          </div>
       </div>

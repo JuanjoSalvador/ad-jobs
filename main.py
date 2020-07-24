@@ -8,15 +8,19 @@ app = Flask(__name__,
 
 app.config.from_pyfile('settings.cfg')    
 
-@app.route('/',methods=['GET', 'POST'])
-def root():
+@app.route('/',methods=['GET'])
+def index():
+    return render_template("index.jinja")
+
+@app.route('/send',methods=['GET', 'POST'])
+def send():
     form_sended = False
     if request.method == 'POST':
         form_sended = True
 
-    return render_template("index.jinja", form_sended = form_sended)
+    return render_template("new.jinja", form_sended = form_sended)
 
-@app.route('/admin',methods=['GET'])
+@app.route('/admin',methods=['GET', 'POST'])
 def admin():
     return render_template("admin.jinja")
 
