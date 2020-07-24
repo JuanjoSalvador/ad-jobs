@@ -1,1 +1,1 @@
-web: gunicorn adjobs:app
+web: gunicorn adjobs
