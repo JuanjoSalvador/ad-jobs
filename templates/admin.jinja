@@ -5,36 +5,33 @@
       <div class="container">
          <div class="columns">
             <div class="column"></div>
-            <div class="column is-three-quarters">
+            <div class="column is-two-quarters">
                <div class="card">
                   <div class="card-content">
                      <div class="content">
-                        <p>
-                           Para permitir que Midas CI pueda gestionar las tareas de build, testing e integración de tu código, primero necesitamos algunos datos, como el nombre del
-                           proyecto, y la URL del repositorio donde lo estás alojando. Si no tienes ya uno, te recomendamos que utilices un repositorio local Gogs o Gitea, perfectos
-                           para servir desde una Raspberry Pi.
-                        </p>
-                        <br/>
-                        <form method="POST" action="/new">
+                        <h2 class="is-title is-2">Panel de control</h2>
+                        <form method="POST" action="/login">
                            <div class="field">
-                              <label class="label">Nombre del proyecto</label>
-                              <div class="control">
-                                 <input class="input" name="project_name" type="text" placeholder="Mi fantástico proyecto" required>
+                              <label class="label">Correo electrónico</label>
+                              <div class="control has-icons-left">
+                                 <input class="input" name="user_email" type="text" placeholder="john.doe@myemailserver.com" required>
+                                 <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                 </span>
                               </div>
                            </div>
                            <div class="field">
-                              <label class="label">URL del repositorio</label>
-                              <div class="control">
-                                 <input class="input" name="project_repo" type="text" placeholder="https://azeroth.local/juanjo/midas-ci.git" required>
+                              <label class="label">Contraseña</label>
+                              <div class="control has-icons-left">
+                                 <input class="input" name="user_pass" type="password" placeholder="Str0ngP4ssw0rd" required>
+                                 <span class="icon is-small is-left">
+                                    <i class="fas fa-key"></i>
+                                 </span>
                               </div>
                            </div>
-                           <br/><br/>
-                           <div class="field is-grouped">
+                           <div class="field">
                               <div class="control">
-                                 <input type="submit" value="Aceptar" class="button is-link">
-                              </div>
-                              <div class="control">
-                                 <button class="button is-text">Cancelar</button>
+                                 <input type="submit" value="Entrar" class="button is-fullwidth is-link">
                               </div>
                            </div>
                         </form>
