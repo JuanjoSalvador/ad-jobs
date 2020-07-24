@@ -1,0 +1,31 @@
+nav.level div.level-item a.link {
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+nav.level div.level-item a.link:hover {
+    /*color: rgb(50, 115, 220);*/
+    text-decoration: underline;
+}
+
+section.hero.is-green {
+    background-color: green;
+    color: white;
+}
+
+section.hero.is-green div.hero-body div.container nav.level div.level-item h1.title {
+    color: white;
+}
+
+footer.footer {
+    background-color: rgb(220, 250, 226);
+}
+footer.footer .content .columns {
+    font-size: small;
+    text-align: justify;
+}
+
+.is-centered {
+    text-align: center;
+}
