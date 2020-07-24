@@ -5,38 +5,87 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
+        
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
     </head>
     <body>
-        <section class="hero is-primary">
+        <section class="hero is-green">
             <div class="hero-body">
                 <div class="container">
-                    {#  #}
                     <nav class="level">
-                        <p class="level-item has-text-centered">
+                        <div class="level-item has-text-centered">
                             <a class="link is-info" href="/">Inicio</a>
-                        </p>
-                        <p class="level-item has-text-centered">
+                        </div>
+                        <div class="level-item has-text-centered">
                             <a class="link is-info" href="/enviar">Envía una oferta</a>
-                        </p>
+                        </div>
                         <div class="level-item has-text-centered">
                             <h1 class="title" style="text-align: center">
                                 {{ config.SITE_TITLE }}
                             </h1>
                         </div>
-                        <p class="level-item has-text-centered">
-                            <a class="link is-info" href="https://t.me/andaluciadev">Telegram</a>
-                        </p>
-                        <p class="level-item has-text-centered">
-                            <a class="link is-info" href="/contacto">Contacto</a>
-                        </p>
+                        <div class="level-item has-text-centered">
+                            <a class="link is-info" href="https://t.me/andaluciadev" target="_blank">Telegram</a>
+                        </div>
+                        <div class="level-item has-text-centered">
+                            <a class="link is-info" href="https://github.com/JuanjoSalvador/ad-jobs">GitHub</a>
+                        </div>
                     </nav>
                     
                 </div>
             </div>
         </section>
+
         {% block content %}
             <!-- content -->
         {% endblock %}
+
+        <footer class="footer">
+            <div class="content">
+                <div class="columns">
+                <div class="column is-one-fifth"></div>
+                <div class="column is-one-fifth">
+                        <h4 class="is-title is-4">Aviso de privacidad</h4>
+                        <p>
+                            Con objetivo de mantener la privacidad de los usuarios de Andalucia Developers: Jobs, desde este portal
+                            no recopilamos ni mantenemos ninguna información de caracter personal. Todas las ofertas publicadas aquí,
+                            tienen una fecha de caducidad estándar de 14 días, que podrán prolongarse a 30 días si el usuario lo desea.
+                        </p>
+                    </div>
+
+                    <div class="column is-one-fifth">
+                        <h4 class="is-title is-4">Andalucia Developers y AD: Jobs</h4>
+                        <p>
+                            Comunidad de desarrolladores, diseñadores y administradores de sistemas andaluces, establecida en 2017 
+                            como grupo de Telegram, cuyo objetivo es compartir conocimiento, experiencias, ideas, proyectos, etc.
+                        </p>
+                        <p>
+                            Así mismo, el proyecto Andalucia Developers: Jobs nace a raíz de este, y pretende servir a modo de tablón de anuncios 
+                            para ofertas de trabajo que los miembros del grupo publican, de forma que no quedan enterradas en mensajes y cualquiera
+                            puede consultarlas.
+                        </p>
+                    </div>
+
+                    <div class="column is-one-fifth">
+                        <h4 class="is-title is-4">OpenSource</h4>
+                        <p>
+                            El proyecto Andalucia Developers: Jobs se encuentra publicado bajo licencia GPL, con el código fuente disponible
+                            en GitHub, para que cualquiera interesado pueda realizar aportaciones y/o correcciones del funcionamiento o la estética
+                            del sitio web.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="attributions is-centered">
+                    <p>
+                        Made with <span style="color: #e25555;">&hearts;</span> by Juanjo Salvador
+                    </p>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
