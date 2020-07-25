@@ -1,5 +1,7 @@
 # Andalucia Developers: Jobs
 
+![Pytest](https://github.com/JuanjoSalvador/ad-jobs/workflows/Pytest/badge.svg)
+
 > El proyecto Andalucia Developers: Jobs nace a raíz la comunidad homónima, y pretende servir a modo de tablón de anuncios para ofertas de trabajo que los miembros del grupo publican, de forma que no queden enterradas en mensajes y cualquiera puede consultarlas.
 
 En desarrollo, pero puede verse el avance actual desde [Heroku](https://ad-jobs.herokuapp.com/).
