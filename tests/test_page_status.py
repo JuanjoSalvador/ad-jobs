@@ -1,4 +1,10 @@
+import pytest
 from flask import url_for
+
+@pytest.mark.options(debug=False)
+def test_app(app):
+  assert not app.debug, 'Ensure the app not in debug mode'
+
 """
     Tests para comprobar las rutas públicas de la aplicación
 """
