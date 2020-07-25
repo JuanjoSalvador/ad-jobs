@@ -6,8 +6,6 @@
 
 En desarrollo, pero puede verse el avance actual desde [Heroku](https://ad-jobs.herokuapp.com/).
 
-![Captura de pantalla de Andalucia Developers: Jobs, en Heroku](https://pbs.twimg.com/media/EdtUgrHWoAMhKFv?format=png&name=large)
-
 ## Desarrollo
 
 ### Virtualenv
