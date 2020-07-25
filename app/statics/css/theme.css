@@ -10,7 +10,6 @@ nav.level div.level-item a.link {
 }
 
 nav.level div.level-item a.link:hover {
-    /*color: rgb(50, 115, 220);*/
     text-decoration: underline;
 }
 
@@ -38,6 +37,7 @@ footer.footer {
     width: 100%;
     background-color: rgb(220, 250, 226);
 }
+
 footer.footer .content .columns {
     text-align: justify;
 }
