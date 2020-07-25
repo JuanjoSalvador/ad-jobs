@@ -24,7 +24,7 @@ section.hero.is-green div.hero-body div.container nav.level div.level-item h1.ti
 }
 
 div.wrapper {
-    min-height: 65vh;
+    min-height: 68vh;
 }
 
 div.wrapper.green {
@@ -50,4 +50,9 @@ figure.image {
 
 .is-centered {
     text-align: center;
+}
+
+.is-vertical-centered {
+    position: relative;
+    top: 30%;
 }
