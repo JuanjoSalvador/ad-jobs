@@ -6,8 +6,9 @@
 
         <link rel="stylesheet" href="/css/bulma.min.css">
         <link rel="stylesheet" href="/css/theme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+        {# <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script> #}
     </head>
     <body>
         <section class="hero is-green">
@@ -37,37 +38,38 @@
             </div>
         </section>
 
-        {% block content %}
-            <!-- content -->
-        {% endblock %}
+        <div class="wrapper">
+            {% block content %}
+                <!-- content -->
+            {% endblock %}
+        </div>
 
         <footer class="footer">
             <div class="content">
                 <div class="columns">
-                <div class="column is-one-fifth"></div>
-                <div class="column is-one-fifth">
-                        <h4 class="is-title is-4">Aviso de privacidad</h4>
+                    <div class="column"></div>
+                    <div class="column">
+                        <h4 class="is-title is-4">Privacidad</h4>
                         <p>
                             Con objetivo de mantener la privacidad de los usuarios de Andalucia Developers: Jobs, desde este portal
-                            no recopilamos ni mantenemos ninguna información de caracter personal. Todas las ofertas publicadas aquí,
+                            no recopilamos ni mantenemos ninguna información de caracter personal. 
+                        </p>
+                        <p>
+                            Todas las ofertas publicadas aquí,
                             tienen una fecha de caducidad estándar de 14 días, que podrán prolongarse a 30 días si el usuario lo desea.
                         </p>
                     </div>
 
-                    <div class="column is-one-fifth">
-                        <h4 class="is-title is-4">Andalucia Developers y AD: Jobs</h4>
+                    <div class="column">
+                        <h4 class="is-title is-4">Comunidad</h4>
                         <p>
-                            Comunidad de desarrolladores, diseñadores y administradores de sistemas andaluces, establecida en 2017 
-                            como grupo de Telegram, cuyo objetivo es compartir conocimiento, experiencias, ideas, proyectos, etc.
-                        </p>
-                        <p>
-                            Así mismo, el proyecto Andalucia Developers: Jobs nace a raíz de este, y pretende servir a modo de tablón de anuncios 
-                            para ofertas de trabajo que los miembros del grupo publican, de forma que no quedan enterradas en mensajes y cualquiera
-                            puede consultarlas.
+                            Andalucia Developers es una comunidad de desarrolladores, diseñadores y administradores de sistemas andaluces, 
+                            establecida en 2017 como grupo de Telegram, cuyo objetivo es compartir conocimiento, experiencias, ideas, 
+                            proyectos, etc, sin forma jurídica.
                         </p>
                     </div>
-
-                    <div class="column is-one-fifth">
+                        
+                    <div class="column">
                         <h4 class="is-title is-4">OpenSource</h4>
                         <p>
                             El proyecto Andalucia Developers: Jobs se encuentra publicado bajo licencia GPL, con el código fuente disponible
@@ -75,6 +77,20 @@
                             del sitio web.
                         </p>
                     </div>
+
+                    <div class="column">
+                        <h4 class="is-title is-4">Contacto</h4>
+                        <p>
+                            Contacta directamente con nosotros si tienes cualquier duda o petición.
+                        </p>
+                        <ul type="none">
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:admin@andaluciadev.com">admin@andaluciadev.com</a></li>
+                            <li><i class="fa fa-telegram" aria-hidden="true"></i> <a href="https://t.me/andaluciadev">Andalucia Developers</a></li>
+                            <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/AndaluciaDev">@AndaluciaDev</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column"></div>
                 </div>
 
                 <div class="attributions is-centered">

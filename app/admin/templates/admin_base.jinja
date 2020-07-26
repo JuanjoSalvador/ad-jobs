@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ config.SITE_TITLE }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        <section class="hero is-green">
+            <div class="hero-body">
+                <div class="container">
+                    <nav class="level">
+                        <div class="level-item has-text-centered">
+                            <h1 class="title" style="text-align: center">
+                                {{ config.SITE_TITLE }}
+                            </h1>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            {% block content %}
+                <!-- content -->
+            {% endblock %}
+        </div>
+
+        <footer class="footer">
+            <div class="content">
+                <div class="attributions is-centered">
+                    <p>
+                        Made with <span style="color: #e25555;">&hearts;</span> by Juanjo Salvador
+                    </p>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

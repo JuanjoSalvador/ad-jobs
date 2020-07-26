@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app():
     app = Flask(__name__,
@@ -12,5 +12,9 @@ def create_app():
 
     from .admin import admin_bp
     app.register_blueprint(admin_bp)
+
+    @app.errorhandler(404)
+    def page_not_found(e):
+        return render_template('404.jinja')
 
     return app

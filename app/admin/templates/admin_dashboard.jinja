@@ -1,0 +1,102 @@
+{% extends 'admin_base.jinja' %}
+
+{% block content %}
+
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-desktop">
+                <div class="column is-one-fifth">
+                    <div class="content">
+                        <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a class="is-active">Resumen</a></li>
+                                <li><a href="/admin/inbox">Bandeja de entrada</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administración
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/admin/managers">Administradores</a></li>
+                                <li><a href="/admin/published-offers">Ofertas publicadas</a></li>
+                                <li><a href="/admin/retired-offers">Ofertas retiradas</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Otros
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/logout">Cerrar sesión</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-3">Resumen</h3>
+                    <p>Datos totales de ofertas recibidas, ofertas publicadas y ofertas ya retiradas</p>
+                    <br/>
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas recibidas</p>
+                                <p class="title">34</p>
+                            </div>
+                        </div>
+
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas publicadas</p>
+                                <p class="title">32</p>
+                            </div>
+                        </div>
+
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas retiradas</p>
+                                <p class="title">28</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <hr class="separator" />
+                    <h4 class="title is-4">Últimas ofertas recibidas</h4>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-4">Vicepresidente Ejecutivo</p>
+                            <div class="content">
+                                <p>
+                                    ¿Puede pagarme ahora?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-4">Supervisor de seguridad en el Sector 7-G</p>
+                            <div class="content">
+                                <p>
+                                    Nuuucelar, se dice nuuucelar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-4">Director de Sanidad</p>
+                            <div class="content">
+                                <p>
+                                    ¿Es que eso, no puede hacerlo otro?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

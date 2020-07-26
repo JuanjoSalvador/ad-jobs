@@ -1,3 +1,17 @@
+ul.menu-list li, ul.job-requirements > li, footer ul li {
+    list-style: none;
+    margin-left: -1.9rem;
+}
+
+ul.job-requirements li > ul, ul > li > ul {
+    list-style-type: square;
+    margin-left: 1.9rem;
+}
+
+ul > li {
+    margin-bottom: 0.35rem;
+}
+
 nav.level div.level-item a.link {
     color: white;
     font-weight: bold;
@@ -5,7 +19,6 @@ nav.level div.level-item a.link {
 }
 
 nav.level div.level-item a.link:hover {
-    /*color: rgb(50, 115, 220);*/
     text-decoration: underline;
 }
 
@@ -18,14 +31,37 @@ section.hero.is-green div.hero-body div.container nav.level div.level-item h1.ti
     color: white;
 }
 
-footer.footer {
+div.wrapper {
+    min-height: 68vh;
+}
+
+div.wrapper.green {
     background-color: rgb(220, 250, 226);
 }
+
+footer.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(220, 250, 226);
+}
+
 footer.footer .content .columns {
-    font-size: small;
     text-align: justify;
+}
+
+figure.image { 
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .is-centered {
     text-align: center;
+}
+
+.is-vertical-centered {
+    position: relative;
+    top: 30%;
 }
