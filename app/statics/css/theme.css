@@ -1,6 +1,15 @@
-ul li {
+ul.menu-list li, ul.job-requirements > li, footer ul li {
     list-style: none;
     margin-left: -1.9rem;
+}
+
+ul.job-requirements li > ul, ul > li > ul {
+    list-style-type: square;
+    margin-left: 1.9rem;
+}
+
+ul > li {
+    margin-bottom: 0.35rem;
 }
 
 nav.level div.level-item a.link {
