@@ -7,41 +7,37 @@
             <div class="columns is-flex is-mobile">
                 <div class="column">
                     <div class="content">
-                        <!-- INICIO contenido de ejemplo -->
+                    {% for offer in offers %}
                         <div class="card">
                             <div class="card-content">
-                                <p class="title is-4">Vicepresidente Ejecutivo</p>
+                                <p class="title is-4">{{ offer.job }}</p>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, 
-                                        nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
+                                        {{ offer.description }}
                                     </p>
                                     <ul class="job-requirements">
-                                        <li><strong>Compañía</strong>: Compu-Global-Hyper-Mega-Net</li>
-                                        <li><strong>Salario</strong>: 40.000€ anuales</li>
-                                        <li><strong>Localización</strong>: Springfield</li>
+                                        <li><strong>Compañía</strong>: {{ offer.company }}</li>
+                                        <li><strong>Salario</strong>: {{ offer.salary }} {% if offer.salary %} €{% endif %} </li>
+                                        <li><strong>Localización</strong>: {{ offer.localization }}</li>
                                         <li>
                                         <strong>Cualidades requeridas</strong>:
                                             <ul>
-                                                <li>Python 3</li>
-                                                <li>Flask</li>
-                                                <li>CSS3</li>
+                                                <li>{{ offer.requirements }}</li>
                                             </ul>
                                         </li>
                                         <li>
                                         <strong>¿Qué ofrecemos?</strong>:
                                             <ul>
-                                                <li>Kiwis del día</li>
-                                                <li>Café incluído</li>
+                                                <li>{{ offer.extra }}</li>
                                             </ul>
                                         </li>
-                                        <li><strong>Sitio web</strong>: <a href="https://jsalvador.me/">jsalvador.me</a></li>
+                                        <li><strong>Contacto</strong>: {{ offer.contact }}</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                    {% endfor %}
                     </div>
-                    <!-- FIN contenido de ejemplo -->
                 </div>
             </div>
         </div>
