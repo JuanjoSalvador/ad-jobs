@@ -1,42 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>{{ config.SITE_TITLE }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/css/bulma.min.css">
-        <link rel="stylesheet" href="/css/theme.css">
+        {# <link rel="stylesheet" href="/css/bulma.min.css"> #}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
         
-        {# <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script> #}
     </head>
     <body>
-        <section class="hero is-green">
-            <div class="hero-body">
-                <div class="container">
-                    <nav class="level">
-                        <div class="level-item has-text-centered">
-                            <a class="link is-info" href="/">Inicio</a>
+        <div class="columns">
+            <div class="column">
+                <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="/">
+                                <h1 class="title is-4" style="text-align: center">
+                                    {{ config.SITE_TITLE }}
+                                </h1>
+                            </a>
+
+                            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                                <span aria-hidden="true"></span>
+                            </a>
                         </div>
-                        <div class="level-item has-text-centered">
-                            <a class="link is-info" href="/enviar">Envía una oferta</a>
+
+                        <div class="navbar-start">
+                            <a class="navbar-item" href="/enviar">
+                                Enviar una oferta
+                            </a>
+                            <a class="navbar-item" href="https://t.me/s/andaluciadevjobs" target="_blank">
+                                Recibir ofertas de trabajo
+                            </a>
                         </div>
-                        <div class="level-item has-text-centered">
-                            <h1 class="title" style="text-align: center">
-                                {{ config.SITE_TITLE }}
-                            </h1>
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="/login">
+                                Acceso
+                            </a>
                         </div>
-                        <div class="level-item has-text-centered">
-                            <a class="link is-info" href="https://t.me/andaluciadev" target="_blank">Telegram</a>
-                        </div>
-                        <div class="level-item has-text-centered">
-                            <a class="link is-info" href="https://github.com/JuanjoSalvador/ad-jobs">GitHub</a>
-                        </div>
-                    </nav>
-                    
-                </div>
+                    </div>
+                </nav>
             </div>
-        </section>
+        </div>
 
         <div class="wrapper">
             {% block content %}
@@ -84,9 +93,9 @@
                             Contacta directamente con nosotros si tienes cualquier duda o petición.
                         </p>
                         <ul type="none">
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:admin@andaluciadev.com">admin@andaluciadev.com</a></li>
-                            <li><i class="fa fa-telegram" aria-hidden="true"></i> <a href="https://t.me/andaluciadev">Andalucia Developers</a></li>
-                            <li><i class="fa fa-twitter" aria-hidden="true"></i> <a href="https://twitter.com/AndaluciaDev">@AndaluciaDev</a></li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:{{ config.SITE_EMAIL }}">admin@andaluciadev.com</a></li>
+                            <li><i class="fa fa-telegram" aria-hidden="true"></i> <a href="{{ config.SITE_TELEGRAM_URL }}">{{ config.SITE_TELEGRAM_TITLE }}</a></li>
+                            <li><i class="fa fa-github" aria-hidden="true"></i> <a href="{{ config.SITE_GITHUB_URL }}">{{ config.SITE_GITHUB_TITLE }}</a></li>
                         </ul>
                     </div>
 
@@ -97,9 +106,6 @@
                     <p>
                         Made with <span style="color: #e25555;">&hearts;</span> by Juanjo Salvador
                     </p>
-                    <a href="https://bulma.io">
-                        <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
-                    </a>
                 </div>
             </div>
         </footer>
