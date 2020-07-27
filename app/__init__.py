@@ -11,9 +11,9 @@ app = Flask(__name__,
 app.config.from_object(config)
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
-
 db.init_app(app)
+
+migrate = Migrate(app, db)
 
 def create_app():
 
