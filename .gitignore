@@ -2,3 +2,5 @@ env
 __pycache__
 .vscode
 .pytest_cache
+migrations
+dbase.db
