@@ -1,6 +1,6 @@
 from flask import abort, render_template, request
 from app.models import Offers
-from . import public_bp
+from app.public import public_bp
 
 
 @public_bp.route('/',methods=['GET'])
