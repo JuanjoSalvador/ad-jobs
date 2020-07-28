@@ -22,8 +22,8 @@ nav.level div.level-item a.link:hover {
     text-decoration: underline;
 }
 
-section.hero.is-green {
-    background-color: green;
+.is-green {
+    background-color: #0ab867;
     color: white;
 }
 
@@ -63,5 +63,5 @@ figure.image {
 
 .is-vertical-centered {
     position: relative;
-    top: 30%;
+    top: 80%;
 }
