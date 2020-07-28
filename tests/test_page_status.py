@@ -24,3 +24,9 @@ def test_contact(client):
 
 def test_admin_login(client):
     assert client.get(url_for('admin.login')).status_code == 200
+
+def test_admin(client):
+    assert client.get(url_for('admin.admin')).status_code == 200
+
+def test_admin_inbox(client):
+    assert client.get(url_for('admin.inbox')).status_code == 200
