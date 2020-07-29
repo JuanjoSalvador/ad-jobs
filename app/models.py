@@ -32,4 +32,4 @@ class Offers(db.Model):
 
     @staticmethod
     def get_last_offers():
-        return Offers.query.filter_by(approbed = False).order_by(Offers.id.desc()).limit(3)
+        return Offers.query.filter_by(approbed = None).order_by(Offers.id.desc()).limit(3)

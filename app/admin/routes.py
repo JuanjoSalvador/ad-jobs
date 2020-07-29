@@ -31,3 +31,18 @@ def validate_offer(id):
     offer.approbed = True
     db.session.commit()
     return ('', 200)
+
+@admin_bp.route("/admin/details/<id>/invalid")
+def reject_offer(id):
+    offer = Offers.query.filter_by(id=id).first()
+    offer.approbed = False
+    db.session.commit()
+    return ('', 200)
+
+@admin_bp.route("/admin/details/<id>/remove")
+def remove_offer(id):
+    offer = Offers.query.filter_by(id=id).first()
+    offer.approbed = None
+    db.session.commit()
+    return ('', 200)
+    

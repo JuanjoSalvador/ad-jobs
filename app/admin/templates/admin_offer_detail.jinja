@@ -68,7 +68,7 @@
             <br/>
             <div class="columns is-desktop is-centered">
                 <div class="columnn">
-                    {% if offer.approbed == False %}
+                    {% if offer.approbed == None %}
                         <button class="button is-success is-outlined" onclick='validate_offer( {{ offer.id }} )'>
                             <strong>Aprobar</strong>
                             <span class="icon is-small">
@@ -76,20 +76,26 @@
                             </span>
                         </button>
 
-                        <button class="button is-danger is-outlined">
+                        <button class="button is-danger is-outlined" onclick='reject_offer( {{ offer.id }} )'>
                             <strong>Rechazar</strong>
                             <span class="icon">
                                 <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                             </span>
                         </button>
                     {% else %}
-                        <h4 class="subtitle is-4">La oferta está aprobada</h4>
-                        <button class="button is-danger is-outlined">
-                            <span class="icon">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </span>
-                            <strong>Eliminar</strong>
-                        </button>
+                        {% if offer.approbed == False %}
+                            <h4 class="subtitle is-4">La oferta ha sido rechazada.</h4>
+                        {% endif %}
+
+                        {% if offer.approbed == True %}
+                        <h4 class="subtitle is-4">La oferta ha sido aprobada.</h4>
+                            <button class="button is-danger is-outlined" onclick='remove_offer( {{ offer.id }} )'>
+                                <span class="icon">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </span>
+                                <strong>Eliminar</strong>
+                            </button>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>
