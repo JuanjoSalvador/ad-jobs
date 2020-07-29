@@ -3,8 +3,8 @@ from app.models import Offers
 
 db.create_all()
 
-sample = Offers(id=1,
-                job='Vicepresidente Ejecutivo', 
+sample = Offers(id=4,
+                job='Vicepresidente Ejecutivo 3', 
                 company='Compu-Global-Hyper-Mega-Net', 
                 description='''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, 
                 metus ultrices eleifend gravida, nulla nunc varius lectus, 
@@ -14,7 +14,8 @@ sample = Offers(id=1,
                 localization='Springfield',
                 requirements='Python, Flask, CSS3',
                 extra='Kiwis, café',
-                contact='jsalvador.me'
+                contact='jsalvador.me',
+                approbed = False
             )
 
 db.session.add(sample)

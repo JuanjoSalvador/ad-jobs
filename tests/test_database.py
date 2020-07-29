@@ -16,7 +16,8 @@ def test_database():
                     localization='Springfield',
                     requirements='Python, Flask, CSS3',
                     extra='Kiwis, café',
-                    contact='jsalvador.me'
+                    contact='jsalvador.me',
+                    approbed = True
                 )
 
     db.session.add(sample)

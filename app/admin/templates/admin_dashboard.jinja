@@ -61,39 +61,21 @@
                         </div>                        
                     </div>
                     <hr class="separator" />
-                    <h4 class="title is-4">Últimas ofertas recibidas</h4>
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title is-4">Vicepresidente Ejecutivo</p>
-                            <div class="content">
-                                <p>
-                                    ¿Puede pagarme ahora?
-                                </p>
+                    <h4 class="title is-4">Últimas ofertas recibidas sin revisión</h4>
+                    {% for offer in offers %}
+                        <div class="card">
+                            <div class="card-content">
+                                <a href="/admin/details/{{ offer.id }}" class="title is-4">{{ offer.job }}</a>
+                                <br /><br />
+                                <div class="content">
+                                    <p>
+                                        ¿Puede pagarme ahora?
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
                     <br/>
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title is-4">Supervisor de seguridad en el Sector 7-G</p>
-                            <div class="content">
-                                <p>
-                                    Nuuucelar, se dice nuuucelar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <br/>
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title is-4">Director de Sanidad</p>
-                            <div class="content">
-                                <p>
-                                    ¿Es que eso, no puede hacerlo otro?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
