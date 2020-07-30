@@ -1,0 +1,63 @@
+{% extends 'admin_base.jinja' %}
+
+{% block content %}
+
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-desktop">
+                <div class="column is-one-fifth">
+                    <div class="content">
+                        <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/admin">Resumen</a></li>
+                                <li><a class="is-active">Bandeja de entrada</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administración
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Administradores</a></li>
+                                <li><a>Ofertas publicadas</a></li>
+                                <li><a>Ofertas retiradas</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Otros
+                            </p>
+                            <ul class="menu-list">
+                                <li><a>Cerrar sesión</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-3">Bandeja de entrada</h3>
+                    {% for offer in offers %}
+                        <div class="card">
+                            <div class="card-content {{ 'is-green' if offer.approbed }} {{ 'is-red' if offer.approbed == False }}">
+                                <a href="/admin/details/{{ offer.id }}" class="title is-4">{{ offer.job }}</a>
+                                <br /><br />
+                                <div class="content">
+                                    <p>
+                                        {{ offer.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% if count == 0 %}
+                        <p>No hay ofertas pendientes de revisión.</p>
+                    {% endif %}
+                    <br/>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

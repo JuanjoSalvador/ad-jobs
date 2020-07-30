@@ -8,17 +8,19 @@ En desarrollo, pero puede verse el avance actual desde [Heroku](https://ad-jobs.
 
 ## Desarrollo
 
-### Virtualenv
+### Preparación del entorno
+
+#### Virtualenv
 
 1. Creamos el entorno virtual y lo activamos
 
-#### Linux
+##### Linux
 ```shell
 $ virtualenv env -p python3
 $ source ./env/bin/activate
 ```
 
-#### Windows (PowerShell)
+##### Windows (PowerShell)
 ```powershell
 PS virtualenv env -p python3
 PS env/Scripts/activate.ps1
@@ -30,37 +32,60 @@ PS env/Scripts/activate.ps1
 $ pip install -r requirements.txt
 ```
 
-3. Ejecutamos el servidor de desarrollo (liveserver) de Flask
-
-#### Linux
+3. Inicializamos la base de datos
 
 ```shell
-$ ./run.sh
+$ flask db init
+$ flask db migrate -m "Migración inicial."
 ```
 
-#### Windows (PowerShell)
-```powershell
-PS .\run.ps1
-```
+4. Y ejecutamos el servidor de desarrollo (liveserver) de Flask
+
+    ##### Linux
+
+    ```shell
+    $ ./run.sh
+    ```
+
+    ##### Windows (PowerShell)
+    ```powershell
+    PS .\run.ps1
+    ```
 
 La salida tendría que ser algo como esto: 
 
-```
- * Serving Flask app "main.py" (lazy loading)
- * Environment: development
- * Debug mode: on
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: xxx-xxx-xxx
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```shell
+* Serving Flask app "main.py" (lazy loading)
+* Environment: development
+* Debug mode: on
+* Restarting with stat
+* Debugger is active!
+* Debugger PIN: xxx-xxx-xxx
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
-### Docker
+#### Docker
 Pendiente.
+
+### Migraciones y cambios en la base de datos
+
+Los cambios en la base de datos que pueden migrarse, actualmente no incluyen cambios en los nombres de las tablas o campos, debido a una limitación de `flask-migrate`.
+
+Para aplicar los cambios, basta con ejecutar
+
+```shell
+$ flask db upgrade
+```
+para reflejar los cambios en la migración, y por último
+
+```shell
+$ flask db migrate -m "Descripción breve de los cambios"
+```
+para aplicarlos.
 
 ## Tests
 
-Para ejecutar los tests definidos actualmente, asegúrate de tener instalado `pytest` y `pytest-flask` primero.
+Para ejecutar los tests definidos actualmente, asegúrate de tener instalado `pytest` y `pytest-flask` primero. Después de cada cambio sustancial, asegúrate de actualizar los tests y que todos terminen en verde antes subirlo.
 
 A continuación solo hay que lanzarlos con
 

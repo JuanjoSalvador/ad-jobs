@@ -1,18 +1,19 @@
-{% extends 'base.jinja' %}
+{% extends 'admin_base.jinja' %}
 {% block content %}
 
    <section class="section">
-      <div class="container">
+      <div class="container ">
          <div class="columns">
             <div class="column"></div>
             <div class="column is-two-quarters">
-               <div class="card">
+               <div class="card is-vertical-centered">
                   <div class="card-content">
                      <div class="content">
-                        <h2 class="is-title is-2">Panel de control</h2>
+                        <figure class="image is-128x128 is-centered">
+                           <img src="/images/panel-de-control.png" />
+                        </figure>
                         <form method="POST" action="/login">
                            <div class="field">
-                              <label class="label">Correo electrónico</label>
                               <div class="control has-icons-left">
                                  <input class="input" name="user_email" type="text" placeholder="john.doe@myemailserver.com" required>
                                  <span class="icon is-small is-left">
@@ -21,7 +22,6 @@
                               </div>
                            </div>
                            <div class="field">
-                              <label class="label">Contraseña</label>
                               <div class="control has-icons-left">
                                  <input class="input" name="user_pass" type="password" placeholder="Str0ngP4ssw0rd" required>
                                  <span class="icon is-small is-left">

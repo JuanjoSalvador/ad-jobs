@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ config.SITE_TITLE }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/theme.css">
+
+        <script src="/js/request.js"></script>
+        
+    </head>
+    <body>
+        <div class="columns">
+            <div class="column">
+                <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="/">
+                                <h1 class="title is-4" style="text-align: center">
+                                    {{ config.SITE_TITLE }}
+                                </h1>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            {% block content %}
+                <!-- content -->
+            {% endblock %}
+        </div>
+
+        <footer class="footer">
+            <div class="content">
+                <div class="attributions is-centered">
+                    <p>
+                        Made with <span style="color: #e25555;">&hearts;</span> by Juanjo Salvador
+                    </p>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

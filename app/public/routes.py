@@ -1,10 +1,12 @@
 from flask import abort, render_template, request
-from . import public_bp
+from app.models import Offers
+from app.public import public_bp
 
 
 @public_bp.route('/',methods=['GET'])
 def index():
-    return render_template("index.jinja")
+    offers = Offers.get_approbed()
+    return render_template("index.jinja", offers = offers)
 
 @public_bp.route('/enviar',methods=['GET', 'POST'])
 def send():
@@ -20,4 +22,4 @@ def contact():
 
 @public_bp.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.jinja'), 404
+    return render_template('404.jinja')

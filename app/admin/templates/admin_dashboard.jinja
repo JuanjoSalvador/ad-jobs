@@ -1,0 +1,88 @@
+{% extends 'admin_base.jinja' %}
+
+{% block content %}
+
+    
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-desktop">
+                <div class="column is-one-fifth">
+                    <div class="content">
+                        <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a class="is-active">Resumen</a></li>
+                                <li><a href="/admin/inbox">Bandeja de entrada</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administración
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/admin/managers">Administradores</a></li>
+                                <li><a href="/admin/published-offers">Ofertas publicadas</a></li>
+                                <li><a href="/admin/retired-offers">Ofertas retiradas</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Otros
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/logout">Cerrar sesión</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="title is-3">Resumen</h3>
+                    <p>Datos totales de ofertas recibidas, ofertas publicadas y ofertas ya retiradas</p>
+                    <br/>
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas recibidas</p>
+                                <p class="title">{{ total_offers }}</p>
+                            </div>
+                        </div>
+
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas publicadas</p>
+                                <p class="title">{{ published }}</p>
+                            </div>
+                        </div>
+
+                        <div class="level-item has-text-centered">
+                            <div>
+                                <p class="heading">Ofertas rechazadas</p>
+                                <p class="title">{{ rejected }}</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <hr class="separator" />
+                    <h4 class="title is-4">Últimas ofertas recibidas sin revisión</h4>
+                    {% for offer in offers %}
+                        <div class="card {{ 'is-green' if offer.approbed }} {{ 'is-red' if offer.approbed == False }}">
+                            <div class="card-content">
+                                <a href="/admin/details/{{ offer.id }}" class="title is-4">{{ offer.job }}</a>
+                                <br /><br />
+                                <div class="content">
+                                    <p>
+                                        {{ offer.description }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% if count == 0 %}
+                        <p>No hay ofertas pendientes de revisión.</p>
+                    {% endif %}
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'admin_base.jinja' %}
+
+{% block content %}
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-desktop">
+                <div class="column is-one-fifth">
+                    <div class="content">
+                        {# <aside class="menu">
+                            <p class="menu-label">
+                                General
+                            </p>
+                            <ul class="menu-list">
+                                <li><a class="is-active">Resumen</a></li>
+                                <li><a href="/admin/inbox">Bandeja de entrada</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Administración
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/admin/managers">Administradores</a></li>
+                                <li><a href="/admin/published-offers">Ofertas publicadas</a></li>
+                                <li><a href="/admin/retired-offers">Ofertas retiradas</a></li>
+                            </ul>
+                            <p class="menu-label">
+                                Otros
+                            </p>
+                            <ul class="menu-list">
+                                <li><a href="/logout">Cerrar sesión</a></li>
+                            </ul>
+                        </aside> #}
+                        <a href="javascript:history.back()">
+                            <strong>⟵ Atrás</strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="subtitle is-3">Vicepresidente Ejecutivo | Compu-Global-Hyper-Mega-Net</h3>
+                    <p>¿Puede pagarme ahora?</p>
+                    <br/>
+                    <ul>
+                        <li><strong>Compañía</strong>: Compu-Global-Hyper-Mega-Net</li>
+                        <li><strong>Salario</strong>: 40.000€ anuales</li>
+                        <li><strong>Localización</strong>: Springfield</li>
+                        <li>
+                        <strong>Cualidades requeridas</strong>:
+                            <ul>
+                                <li>Python 3</li>
+                                <li>Flask</li>
+                                <li>CSS3</li>
+                            </ul>
+                        </li>
+                        <li>
+                        <strong>¿Qué ofrecemos?</strong>:
+                            <ul>
+                                <li>Kiwis del día</li>
+                                <li>Café incluído</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sitio web</strong>: <a href="https://jsalvador.me/">jsalvador.me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <div class="columns is-desktop is-centered">
+                <div class="columnn">
+                    {% if offer.approbed == None %}
+                        <button class="button is-success is-outlined" onclick='validate_offer( {{ offer.id }} )'>
+                            <strong>Aprobar</strong>
+                            <span class="icon is-small">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            </span>
+                        </button>
+
+                        <button class="button is-danger is-outlined" onclick='reject_offer( {{ offer.id }} )'>
+                            <strong>Rechazar</strong>
+                            <span class="icon">
+                                <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    {% else %}
+                        {% if offer.approbed == False %}
+                            <h4 class="subtitle is-4">La oferta ha sido rechazada.</h4>
+                        {% endif %}
+
+                        {% if offer.approbed == True %}
+                        <h4 class="subtitle is-4">La oferta ha sido aprobada.</h4>
+                            <button class="button is-danger is-outlined" onclick='remove_offer( {{ offer.id }} )'>
+                                <span class="icon">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </span>
+                                <strong>Eliminar</strong>
+                            </button>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
