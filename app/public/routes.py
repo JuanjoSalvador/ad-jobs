@@ -5,7 +5,7 @@ from app.public import public_bp
 
 @public_bp.route('/',methods=['GET'])
 def index():
-    offers = Offers.get_approbed_offers()
+    offers = Offers.get_approbed()
     return render_template("index.jinja", offers = offers)
 
 @public_bp.route('/enviar',methods=['GET', 'POST'])
