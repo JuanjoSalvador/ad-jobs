@@ -3,8 +3,7 @@ from app.models import Offers
 
 db.create_all()
 
-sample = Offers(id=1,
-                job='Vicepresidente Ejecutivo', 
+sample = Offers(job='Vicepresidente Ejecutivo', 
                 company='Compu-Global-Hyper-Mega-Net', 
                 description='''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, 
                 metus ultrices eleifend gravida, nulla nunc varius lectus, 
