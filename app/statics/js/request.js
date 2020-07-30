@@ -2,7 +2,7 @@ const validate_offer = (id) => {
     console.log(id);
     fetch('/admin/details/' + id + '/valid')
         .then(function(response) {
-            
+            window.location.href = "/admin/inbox";
         }, function(error) {
             console.log("Error!" + error)
         }
@@ -13,7 +13,7 @@ const reject_offer = (id) => {
     console.log(id);
     fetch('/admin/details/' + id + '/invalid')
         .then(function(response) {
-            
+            window.location.href = "/admin/inbox";
         }, function(error) {
             console.log("Error!" + error)
         }

@@ -42,39 +42,43 @@
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Ofertas recibidas</p>
-                                <p class="title">34</p>
+                                <p class="title">{{ total_offers }}</p>
                             </div>
                         </div>
 
                         <div class="level-item has-text-centered">
                             <div>
                                 <p class="heading">Ofertas publicadas</p>
-                                <p class="title">32</p>
+                                <p class="title">{{ published }}</p>
                             </div>
                         </div>
 
                         <div class="level-item has-text-centered">
                             <div>
-                                <p class="heading">Ofertas retiradas</p>
-                                <p class="title">28</p>
+                                <p class="heading">Ofertas rechazadas</p>
+                                <p class="title">{{ rejected }}</p>
                             </div>
                         </div>                        
                     </div>
                     <hr class="separator" />
                     <h4 class="title is-4">Últimas ofertas recibidas sin revisión</h4>
                     {% for offer in offers %}
-                        <div class="card">
+                        <div class="card {{ 'is-green' if offer.approbed }} {{ 'is-red' if offer.approbed == False }}">
                             <div class="card-content">
                                 <a href="/admin/details/{{ offer.id }}" class="title is-4">{{ offer.job }}</a>
                                 <br /><br />
                                 <div class="content">
                                     <p>
-                                        ¿Puede pagarme ahora?
+                                        {{ offer.description }}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     {% endfor %}
+
+                    {% if count == 0 %}
+                        <p>No hay ofertas pendientes de revisión.</p>
+                    {% endif %}
                     <br/>
                 </div>
             </div>

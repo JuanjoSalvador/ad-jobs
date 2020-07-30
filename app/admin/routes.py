@@ -11,13 +11,21 @@ def login():
 @admin_bp.route('/admin',methods=['GET'])
 def admin():
     offers = Offers.get_last_offers()
-    return render_template("admin_dashboard.jinja", offers = offers)
+    count = Offers.get_last_offers().count()
+    total_offers = len(Offers.get_all())
+    published = Offers.get_approbed().count()
+    rejected = Offers.get_rejected().count()
+    return render_template("admin_dashboard.jinja", 
+            offers = offers, count = count, total_offers = total_offers,
+            published = published, rejected = rejected
+        )
 
 @admin_bp.route('/admin/inbox', methods=['GET'], defaults={'page': 1})
-@admin_bp.route("/admin/inbox/<page>", methods=['GET', 'POST'])
+#@admin_bp.route("/admin/inbox/<page>", methods=['GET', 'POST'])
 def inbox(page):
-    offers = Offers.get_all()
-    return render_template("admin_inbox.jinja", offers = offers)
+    offers = Offers.get_not_reviewed()
+    count = Offers.get_not_reviewed().count()
+    return render_template("admin_inbox.jinja", offers = offers, count = count)
 
 @admin_bp.route("/admin/details/<id>", methods=['GET', 'POST'])
 def details(id):

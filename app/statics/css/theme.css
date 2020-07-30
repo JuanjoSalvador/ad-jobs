@@ -27,6 +27,11 @@ nav.level div.level-item a.link:hover {
     color: white;
 }
 
+.is-red {
+    background-color: #ff7961;
+    color: white;
+}
+
 section.hero.is-green div.hero-body div.container nav.level div.level-item h1.title {
     color: white;
 }
